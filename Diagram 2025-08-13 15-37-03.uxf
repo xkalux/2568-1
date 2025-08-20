@@ -1,0 +1,41 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><help_text>Pokdeng
+--
+</help_text><element><id>UMLClass</id><coordinates><x>48</x><y>144</y><w>300</w><h>240</h></coordinates><panel_attributes>Pokdeng
+--
+-dealer: Player
+-players: Player[]
+-deck: Deck
+-
++addPlayer(player:Player) :void
++play():void
++constructor(dealer:Dealer, deck:Deck)
+-DealerVsPlayer(Player):void
+-deal(player: Player): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>180</y><w>372</w><h>180</h></coordinates><panel_attributes>Player
+--
+-money: number
+-id: string
+-hands:Hand[] 
+--
++constructor(money:number,id:string, hands:Hand[])
++setBet(money:number) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>480</y><w>252</w><h>144</h></coordinates><panel_attributes>Deck
+--
+-cards: Card[]
+--
++shuffle(times:number):void
++getCard(): Card
++reset():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>480</y><w>252</w><h>144</h></coordinates><panel_attributes>Card
+--
++suit:CardSuit
++rank:CardRank
+--
++&lt;&lt;getter&gt;&gt;Value:number</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>192</y><w>144</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>984</x><y>168</y><w>252</w><h>168</h></coordinates><panel_attributes>Hand
+--
+-cards: Card[]
+--
++addCard(card:Card):number
++&lt;&lt;getter&gt;&gt;Value:number
++reset(): void
++isPok() :bool
++isDeng() :bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>192</y><w>192</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>156</x><y>372</y><w>36</w><h>132</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>516</y><w>192</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>444</x><y>684</y><w>252</w><h>60</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+CardSuit</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>684</y><w>252</w><h>60</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+CardRank</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>564</x><y>612</y><w>36</w><h>84</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>636</x><y>612</y><w>132</w><h>132</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;90;90</additional_attributes></element></diagram>
